@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% block head deferred %}
+    <meta charset="utf-8" />
+    <title>{% if page.title %}{{ page.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include 'partials/metadata.html.twig' %}
+
+    <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
+    <link rel="canonical" href="{{ page.url(true, true) }}" />
+{% endblock head %}
+
+{% block stylesheets %}
+    {% do assets.addCss('theme://vendor/aos/aos.css') %}
+    {% do assets.addCss('theme://vendor/bootstrap/css/bootstrap.min.css') %}
+    {% do assets.addCss('theme://vendor/bootstrap-icons/bootstrap-icons.css') %}
+    
+    {% do assets.addCss('theme://css/style.css') %}
+{% endblock %}
+
+{% block javascripts %}
+    {% do assets.addJs('theme://vendor/aos/aos.js', {group:'bottom'}) %}
+    {% do assets.addJs('theme://vendor/bootstrap/js/bootstrap.bundle.min.js', {group:'bottom'}) %}
+    {% do assets.addJs('theme://vendor/isotope-layout/isotope.pkgd.min.js', {group:'bottom'}) %}
+    
+    {% do assets.addJs('theme://js/main.js', {group:'bottom'}) %}
+{% endblock %}
+
+{% block assets deferred %}
+    {{ assets.css()|raw }}
+    {{ assets.js()|raw }}
+{% endblock %}
+</head>
+<body>
+    <main>
+        {% block header %}
+            <section class="section pb-0">
+                <div class="container">
+                    <div class="row mb-5 align-items-center">
+                        <div class="col-md-12 col-lg-6 mb-4 mb-lg-0" data-aos="fade-up">
+                            <h2>Hey, I'm Annie Hazarika</h2>
+                            <p class="mb-0">Illustrator. Animator. Content Creator.</p>
+                        </div>
+                        <div class="col-md-12 col-lg-6 text-start text-lg-end" data-aos="fade-up" data-aos-delay="100">
+                            {% block header_navigation %}
+                                {% include 'partials/navigation.html.twig' %}
+                            {% endblock %}
+                        </div>
+                    </div>
+                </section>
+        {% endblock %}
+
+        {% block body %}
+            {{ block('content') }}
+        {% endblock %}
+    </main>
+
+    {% block footer %}
+        {% include 'partials/footer.html.twig' %}
+    {% endblock %}
+
+{% block bottom %}
+    {{ assets.js('bottom')|raw }}
+{% endblock %}
+
+</body>
+</html>

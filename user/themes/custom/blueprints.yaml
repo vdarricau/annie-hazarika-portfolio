@@ -1,0 +1,20 @@
+name: Custom
+slug: custom
+type: theme
+version: 0.0.1
+description: Custom theme
+icon: microchip
+author:
+  name: Valentin Darricau
+  email: darricau.valentin@gmail.com
+  url: https://getgrav.org
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
+
+form:
+  validation: loose
+
+  fields:
+    
