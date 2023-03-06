@@ -1,5 +1,3 @@
 ---
 title: Coca Cola
 ---
-
-# TODO

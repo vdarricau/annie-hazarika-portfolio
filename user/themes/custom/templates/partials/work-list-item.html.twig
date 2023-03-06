@@ -8,7 +8,7 @@
             <h3>{{ page.title }}</h3>
         </div>
         {% if (image) %}
-            <img class="img-fluid" src="{{ image.url }}">
+            <img class="img-fluid" src="{{ image.cropResize(640, 3000).url }}"> {# We keep the original height, but maximum width is 640px #}
         {% endif %}
     </a>
 </div>

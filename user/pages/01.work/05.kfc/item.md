@@ -1,5 +1,3 @@
 ---
 title: KFC
 ---
-
-# TODO
