@@ -1,0 +1,10 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    {{ page.content|raw }}
+
+    {% for child in collection %}
+        What the f
+        {% include 'partials/work-list-item.html.twig' with {'portfolio': page, 'page': child, 'truncate': true} %}
+    {% endfor %}
+{% endblock %}

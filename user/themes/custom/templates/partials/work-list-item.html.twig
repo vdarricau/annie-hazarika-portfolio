@@ -1,0 +1,12 @@
+{% set image = page.media.images|first %}
+
+<div class="item web col-sm-6 col-md-4 col-lg-4 mb-4">
+    <a href="{{ page.url }}" class="item-wrap fancybox">
+        <div class="work-info">
+            <h3>{{ page.title }}</h3>
+        </div>
+        {% if (image) %}
+            <img class="img-fluid" src="{{ image }}">
+        {% endif %}
+    </a>
+</div>
