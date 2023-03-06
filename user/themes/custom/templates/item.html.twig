@@ -8,7 +8,9 @@
     </section>
     <section class="section pt-0">
         {% for image in page.media.images %}
-            <img src="{{ image.cropResize(640, 3000).url }}" alt="{{ image.name }}">
+            {% if 'not-shown-' not in image.filename %}
+                <img src="{{ image.cropResize(640, 3000).url }}" alt="{{ image.filename }}">
+            {% endif %}
         {% endfor %}
     </section>
 {% endblock %}
