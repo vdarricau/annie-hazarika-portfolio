@@ -20,3 +20,20 @@ form:
               fields:
                 header.child_type:
                   default: item
+        portfolio:
+          type: tab
+          title: Portfolio Config
+
+          fields:
+
+            content_title:
+              type: spacer
+              title: Content Definition
+
+            header.content.items:
+              type: textarea
+              yaml: true
+              label: Items
+              default: '@self.children'
+              validate:
+                type: yaml

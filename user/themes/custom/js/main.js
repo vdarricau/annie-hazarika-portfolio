@@ -42,24 +42,11 @@
     if (portfolioContainer) {
       let portfolioIsotope = new Isotope(portfolioContainer, {
         itemSelector: '.item',
+        percentPosition: true,
+        masonry: {
+          // columnWidth: '.grid-sizer',
+        }
       });
-
-      let portfolioFilters = select('#filters a', true);
-
-      on('click', '#filters a', function(e) {
-        e.preventDefault();
-        portfolioFilters.forEach(function(el) {
-          el.classList.remove('active');
-        });
-        this.classList.add('active');
-
-        portfolioIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        portfolioIsotope.on('arrangeComplete', function() {
-          AOS.refresh()
-        });
-      }, true);
     }
 
   });

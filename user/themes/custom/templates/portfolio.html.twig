@@ -1,10 +1,13 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-    {{ page.content|raw }}
-
-    {% for child in collection %}
-        What the f
-        {% include 'partials/work-list-item.html.twig' with {'portfolio': page, 'page': child, 'truncate': true} %}
-    {% endfor %}
+    <section class="section site-portfolio">
+        <div class="container">
+            <div id="portfolio-grid" class="row no-gutter" data-aos="fade-up" data-aos-delay="200">
+                {% for child in page.collection %}
+                    {% include 'partials/work-list-item.html.twig' with {'portfolio': page, 'page': child, 'truncate': true} %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
 {% endblock %}

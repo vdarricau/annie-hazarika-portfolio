@@ -4,6 +4,3 @@ content:
     items: '@self.children'
 ---
 
-# Test Page
-
-Blablou
