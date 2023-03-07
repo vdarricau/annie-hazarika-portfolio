@@ -29,6 +29,9 @@ img {
 header .intro {
   font-family: BreeSerif-Regular, Incosolata;
 }
+header .intro a {
+  color: #000;
+}
 header .intro h1 {
   font-size: 3.375rem;
 }

@@ -32,9 +32,12 @@ img {
 }
 
 header {
-
   .intro {
     font-family: BreeSerif-Regular, Incosolata;
+
+    a {
+      color: #000;
+    }
   
     h1 {
       font-size: 3.375rem;
