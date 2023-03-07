@@ -1,6 +1,7 @@
 ---
 title: Knuckle Headz
 columnWidth: 'col-md-6'
+showImages: false
 ---
 
 <div class="text-center">

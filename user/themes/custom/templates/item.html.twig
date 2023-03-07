@@ -17,9 +17,10 @@
                         
                         {% if not image.metadata.hide_portfolio_item_page %}
                             {% set column = image.metadata.columnWidth ? image.metadata.columnWidth : 'col-md-6' %}
+                            {% set width = image.metadata.width ? image.metadata.width : 700 %}
 
                             <div class="image-container {{ column }} mb-4">
-                                <img src="{{ image.cropResize(640, 3000).url }}" alt="{{ image.filename }}">
+                                <img src="{{ image.cropResize(width, 3000).url }}" alt="{{ image.filename }}">
                             </div>
                         {% endif %}
                     {% endfor %}
