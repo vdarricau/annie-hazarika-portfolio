@@ -18,7 +18,7 @@
     {% do assets.addCss('theme://vendor/bootstrap/css/bootstrap.min.css') %}
     {% do assets.addCss('theme://vendor/bootstrap-icons/bootstrap-icons.css') %}
     
-    {% do assets.addCss('theme://css/style.css') %}
+    {% do assets.addCss('theme://css-compiled/style.css') %}
 {% endblock %}
 
 {% block javascripts %}
@@ -37,20 +37,21 @@
 <body>
     <main>
         {% block header %}
-            <section class="section pb-0">
+            <header class="section pb-0">
                 <div class="container">
                     <div class="row mb-5 align-items-center">
-                        <div class="col-md-12 col-lg-6 mb-4 mb-lg-0" data-aos="fade-up">
-                            <h2>Hey, I'm Annie Hazarika</h2> {# @TODO not h2 here #}
+                        <div class="col-md-12 col-lg-6 mb-4 mb-lg-0 intro" data-aos="fade-up">
+                            <h1>Hi, it's Annie.</h1>
                             <p class="mb-0">Illustrator. Animator. Content Creator.</p>
                         </div>
-                        <div class="col-md-12 col-lg-6 text-start text-lg-end" data-aos="fade-up" data-aos-delay="100">
+                        <div class="col-md-12 col-lg-6 text-lg-end" data-aos="fade-up" data-aos-delay="100">
                             {% block header_navigation %}
                                 {% include 'partials/navigation.html.twig' %}
                             {% endblock %}
                         </div>
                     </div>
-                </section>
+                </div>
+            </header>
         {% endblock %}
 
         {% block body %}
