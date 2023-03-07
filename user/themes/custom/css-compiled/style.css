@@ -25,6 +25,10 @@ a:hover {
 img {
   max-width: 100%;
 }
+img.img-center {
+  margin: auto;
+  display: block;
+}
 
 header .intro {
   font-family: BreeSerif-Regular, Incosolata;

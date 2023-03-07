@@ -29,6 +29,11 @@ a {
 
 img {
   max-width: 100%;
+
+  &.img-center {
+    margin: auto;
+    display: block;
+  }
 }
 
 header {
