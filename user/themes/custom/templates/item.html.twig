@@ -1,6 +1,6 @@
 {% extends 'partials/base.html.twig' %}
 
-{% set showImages = page.header.showImages != false %}
+{% set showImages = not page.header.showImages is same as (false) %}
 
 {% block content %}
     <div class="portfolio-item" data-aos="zoom-in-up">
@@ -10,13 +10,20 @@
             {{ page.content|raw }}
         </section>
 
-        {% if (showImages) %}
-            <section class="section pt-0">
-                {% for image in page.media.images %}
-                    {% if 'not-shown-' not in image.filename %}
-                        <img src="{{ image.cropResize(640, 3000).url }}" alt="{{ image.filename }}">
-                    {% endif %}
-                {% endfor %}
+        {% if (showImages and page.media.images is not empty) %}
+            <section class="section section-images pt-0">
+                <div class="row">
+                    {% for image in page.media.images %}
+                        
+                        {% if not image.metadata.hide_portfolio_item_page %}
+                            {% set column = image.metadata.columnWidth ? image.metadata.columnWidth : 'col-md-6' %}
+
+                            <div class="image-container {{ column }} mb-4">
+                                <img src="{{ image.cropResize(640, 3000).url }}" alt="{{ image.filename }}">
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
             </section>
         {% endif %}
     </div>

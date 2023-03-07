@@ -1,5 +1,0 @@
----
-title: Dr Strange
----
-
-# TODO

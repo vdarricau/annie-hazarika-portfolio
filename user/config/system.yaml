@@ -26,7 +26,7 @@ languages:
   override_locale: false
   pages_fallback_only: false
 home:
-  alias: /work
+  alias: /portfolio
   hide_in_urls: false
 pages:
   type: regular
@@ -116,6 +116,9 @@ cache:
     server: null
     port: null
   memcache:
+    server: null
+    port: null
+  memcached:
     server: null
     port: null
 twig:
