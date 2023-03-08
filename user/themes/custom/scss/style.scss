@@ -34,23 +34,6 @@ img {
     margin: auto;
     display: block;
   }
-
-  &.img-half-screen-md {
-    width: calc(50% - 5px);
-
-    &:nth-child(even) {
-      padding-left: calc(var(--bs-gutter-x) * .5);
-    }
-
-    &:nth-child(odd) {
-      padding-right: calc(var(--bs-gutter-x) * .5);
-    }
-
-    @include media-breakpoint-down(md) {
-      width: auto;
-      padding: 0 !important;
-    }
-  }
 }
 
 iframe.yt-player {
@@ -84,6 +67,10 @@ header {
   @include media-breakpoint-down(md) {
     text-align: center;
   }
+}
+
+h1 {
+  font-family: BreeSerif-Regular, Incosolata;
 }
 
 
@@ -241,6 +228,21 @@ header {
   }
 }
 
+.prev-next {
+  position: relative;
+  height: 2rem;
+
+  .previous {
+    left: 0;
+    position: absolute;
+  }
+
+  .next {
+    right: 0;
+    position: absolute;
+  }
+}
+
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -274,31 +276,46 @@ header {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-.footer a {
-  color: #000;
-}
-
-.social a {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: #f8f9fa;
-  position: relative;
-  text-align: center;
-  color: #0d1e2d;
-  
-  &:hover {
-    color: #f8f9fa;
-    background: #0d1e2d;
-    transition: 0.3s all ease-in-out;
+.footer {
+  .row {
+    align-items: center;
   }
   
-  span {
-    display: inline-block;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
+  .social {
+    display: flex;
+    justify-content: flex-end;
+
+    @include media-breakpoint-down(xs) {
+      justify-content: center;
+    }
+  
+    a {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #f8f9fa;
+      position: relative;
+      text-align: center;
+      color: #0d1e2d;
+      margin-right: 1rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+      
+      &:hover {
+        color: #f8f9fa;
+        background: #0d1e2d;
+        transition: 0.3s all ease-in-out;
+      }
+      
+      span {
+        display: inline-block;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+      }
+    }
   }
 }

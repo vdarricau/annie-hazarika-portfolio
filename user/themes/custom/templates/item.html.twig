@@ -27,5 +27,15 @@
                 </div>
             </section>
         {% endif %}
+
+        <section class="section pt-0 prev-next text-center">
+            {% if not page.isFirst %}
+                <a class="previous" href="{{ page.nextSibling.url }}"><i class="bi bi-chevron-left"></i> Previous</a>
+            {% endif %}
+
+            {% if not page.isLast %}
+                <a class="next" href="{{ page.prevSibling.url }}">Next <i class="bi bi-chevron-right"></i></a>
+            {% endif %}
+        </section>
     </div>
 {% endblock %}
