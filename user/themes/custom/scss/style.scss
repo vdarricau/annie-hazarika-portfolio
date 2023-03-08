@@ -242,8 +242,22 @@ header {
 }
 
 /*--------------------------------------------------------------
-# Client
+# About
 --------------------------------------------------------------*/
+
+.about {
+  font-size: 1.35rem;
+
+  @include media-breakpoint-down(md) {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  .row {
+    align-items: center;
+  }
+}
+
 .clients {
   h3 {
     font-size: 35px;

@@ -218,8 +218,21 @@ header .intro p {
 }
 
 /*--------------------------------------------------------------
-# Client
+# About
 --------------------------------------------------------------*/
+.about {
+  font-size: 1.35rem;
+}
+@media (max-width: 991.98px) {
+  .about {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+}
+.about .row {
+  align-items: center;
+}
+
 .clients h3 {
   font-size: 35px;
   font-weight: bold;

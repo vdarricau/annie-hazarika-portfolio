@@ -3,16 +3,9 @@ title: About
 media_order: annie_hazarika.webp
 ---
 
-<section class="section pb-5">
+<section class="section about pb-0">
     <div class="row">
-        <div class="col-md-6 ml-auto order-2" data-aos="fade-up" markdown=1>
-            <img 
-                src="/user/pages/02.about/annie_hazarika.webp" 
-                alt="Annie Hazarika Logo"
-                style="width: 100%"
-                >
-        </div>            
-        <div class="col-md-6 mb-5 mb-md-0 text-center" data-aos="fade-up">
+        <div class="col-lg-7 col-md-12 order-lg-2 mb-4 mb-lg-0" data-aos="fade-up">
             <p>
                 I'm Annie Hazarika, an illustrator and animator straight outta the mystical land of India.
             </p>
@@ -27,16 +20,22 @@ media_order: annie_hazarika.webp
                 When I'm not busy bringing my illustrations to life, I moonlight as a content creator and actor, 
                 having worked with various brands to create amusing yet educational content.
             </p>
+            <p>
+                <b>Contact: </b><a href="mailto:hello.anniehazarika@gmail.com">hello.anniehazarika@gmail.com<a>
+            </p>
+        </div>
+        <div class="col-lg-5 col-md-12 ml-auto order-lg-1" data-aos="fade-up" markdown=1>
+![Annie Hazarika](annie-peacock.jpg?cropResize=700,3000)
         </div>
     </div>
 </section>
       
 <!-- ======= Clients Section ======= -->
 <section class="section clients">
-    <div class="row justify-content-center text-center mb-4">
-        <div class="col-5" data-aos="fade-up">
+    <div class="row justify-content-center text-center">
+        <div class="col-12" data-aos="fade-up">
             <h3 class="h3 heading">CLIENTS</h3>
-            <ul class="list-unstyled">
+            <ul class="list-unstyled mb-0">
                 <li>UNITED NATIONS</li>
                 <li>UNESCO</li>
                 <li>UNICEF</li>
