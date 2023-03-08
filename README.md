@@ -1,5 +1,9 @@
 # Annie Hazarika Portfolio
 
+## Info
+
+This project uses [Grav](https://learn.getgrav.org/17), a Symfony based CMS.
+
 ## Install
 
 ### Requirements
