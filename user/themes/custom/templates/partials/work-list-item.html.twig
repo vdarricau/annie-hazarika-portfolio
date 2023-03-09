@@ -3,12 +3,20 @@
 {% set column = page.header.columnWidth ? page.header.columnWidth : 'col-md-3' %}
 
 <div class="item web col-sm-6 {{ column }} mb-4">
-    <a href="{{ page.url }}" class="item-wrap fancybox">
+    <a
+        href="{{ page.url }}"
+        class="item-wrap fancybox"
+        aria-label="{{ page.title }}"
+    >
         <div class="work-info">
             <h3>{{ page.title }}</h3>
         </div>
         {% if (image) %}
-            <img class="img-fluid" src="{{ image.cropResize(640, 3000).url }}"> {# We keep the original height, but maximum width is 640px #}
+            <img 
+                class="img-fluid"
+                src="{{ image.cropResize(640, 3000).format('webp').url }}" {# We keep the original height, but maximum width is 640px #}
+                alt="{{ page.title }}"
+            > 
         {% endif %}
     </a>
 </div>

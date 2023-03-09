@@ -21,5 +21,5 @@ bin/grav server
 To compile css files from `custom` there:
 ```bash
 cd user/themes/custom
-sass --source-map --watch scss:css-compiled
+sass --source-map --watch scss:css-compiled --style compressed
 ```

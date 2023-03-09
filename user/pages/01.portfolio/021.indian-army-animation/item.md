@@ -1,6 +1,7 @@
 ---
 title: Indian Army
 columnWidth: 'col-md-6'
+showImages: false
 ---
 
 <div class="text-center">

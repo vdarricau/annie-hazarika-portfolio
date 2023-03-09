@@ -20,7 +20,7 @@
                             {% set width = image.metadata.width ? image.metadata.width : 700 %}
 
                             <div class="image-container {{ column }} mb-4">
-                                <img src="{{ image.cropResize(width, 3000).url }}" alt="{{ image.filename }}">
+                                <img src="{{ image.cropResize(width, 3000).format('webp').url }}" alt="{{ image.filename }}">
                             </div>
                         {% endif %}
                     {% endfor %}

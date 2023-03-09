@@ -193,7 +193,7 @@ session:
   enabled: true
   initialize: true
   timeout: 1800
-  name: grav-site
+  name: annie-hazarika-site
   uniqueness: path
   secure: false
   secure_https: true
