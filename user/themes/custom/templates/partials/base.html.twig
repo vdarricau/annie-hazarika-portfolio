@@ -16,7 +16,9 @@
 {% block stylesheets %}
     {% do assets.addCss('theme://vendor/aos/aos.css') %}
     {% do assets.addCss('theme://vendor/bootstrap/css/bootstrap.min.css') %}
-    {% do assets.addCss('theme://vendor/bootstrap-icons/bootstrap-icons.css') %}
+
+    {# Uncomment if you want to add bootstrap icons, then add them to _bootstrap_icons.scss #}
+    {# {% do assets.addCss('theme://vendor/bootstrap-icons/bootstrap-icons.css') %} #}
     
     {% do assets.addCss('theme://css-compiled/style.css') %}
 {% endblock %}
