@@ -8,8 +8,8 @@ This project uses [Grav](https://learn.getgrav.org/17), a Symfony based CMS.
 
 ### Requirements
 
-PHP > 7.1
-Sass installed.
+- PHP > 7.1
+- Sass installed.
 
 ### Commands
 
