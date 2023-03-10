@@ -1,13 +1,9 @@
-####################
-# /!\ This config is used in prod environment
-# To change the dev environment, check /user/localhost/config/system.yaml
-
 absolute_urls: false
 timezone: null
 param_sep: ':'
 wrapped_site: false
 reverse_proxy_setup: false
-force_ssl: true       # Use HTTPS only (redirect from HTTP -> HTTPS)
+force_ssl: false
 force_lowercase_urls: true
 custom_base_url: null
 username_regex: '^[a-z0-9_-]{3,16}$'
@@ -102,7 +98,7 @@ pages:
 cache:
   enabled: true
   check:
-    method: hash      # Optimization, disables file modification checks for pages
+    method: file
   driver: auto
   prefix: g
   purge_at: '0 4 * * *'
@@ -126,10 +122,10 @@ cache:
     server: null
     port: null
 twig:
-  cache: true         # Greatly speeds up the site
-  debug: false        # We do not want to display debug messages
-  auto_reload: false  # Optimization, disables file modification checks for twig files
-  autoescape: true    # Protects from many XSS attacks, but requires twig updates if used in older sites/themes/plugins
+  cache: true
+  debug: true
+  auto_reload: true
+  autoescape: true
   undefined_functions: true
   undefined_filters: true
   safe_functions: {  }
@@ -154,17 +150,17 @@ assets:
   collections:
     jquery: 'system://assets/jquery/jquery-3.x.min.js'
 errors:
-  display: 0          # Display only a simple error
-  log: true           # Log errors for later inspection
+  display: 1
+  log: true
 log:
   handler: file
   syslog:
     facility: local6
     tag: grav
 debugger:
-  enabled: false
+  enabled: true
   provider: clockwork
-  censored: true      # In case if you happen to enable debugger, avoid displaying sensitive information
+  censored: false
   shutdown:
     close_connection: true
   twig: true
@@ -199,10 +195,10 @@ session:
   timeout: 1800
   name: annie-hazarika-site
   uniqueness: path
-  secure: true
+  secure: false
   secure_https: true
   httponly: true
-  samesite: Strict    # Prevent all cross-site scripting attacks
+  samesite: Lax
   split: true
   domain: null
   path: null
