@@ -2,6 +2,7 @@
 title: 'Eva Zubeck'
 columnWidth: col-md-6
 showImages: false
+workItemImage: /user/pages/01.portfolio/2600.eva-zubeck/eva-animation.gif
 ---
 
 ![Eva Zubeck Intro](eva-animation.gif)
