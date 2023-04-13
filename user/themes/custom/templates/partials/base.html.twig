@@ -54,13 +54,14 @@
             <header class="section pb-0">
                 <div class="container">
                     <div class="row mb-5 align-items-center">
-                        <div class="col-md-12 col-lg-6 mb-4 mb-lg-0 intro" data-aos="fade-up">
-                            <a href="{{ home_url }}"> {# @TODO add funky animation here #}
-                                <h1>Hi, it's Annie.</h1>
+                        <div class="col-md-12 col-lg-5 mb-4 mb-lg-0 intro" data-aos="fade-up">
+                            <a class="logos" href="{{ home_url }}">
+                                <img class="logo" src="{{ url('theme://images/hey-its-annie.gif') }}" />
+                                <img class="logo delay" src="{{ url('theme://images/hey-its-annie-2.gif') }}" />
                                 <p class="mb-0">Illustrator. Animator. Content Creator.</p>
                             </a>
                         </div>
-                        <div class="col-md-12 col-lg-6 text-lg-end" data-aos="fade-up" data-aos-delay="100">
+                        <div class="col-md-12 col-lg-7 text-lg-end" data-aos="fade-up" data-aos-delay="100">
                             {% block header_navigation %}
                                 {% include 'partials/navigation.html.twig' %}
                             {% endblock %}

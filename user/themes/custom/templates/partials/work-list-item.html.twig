@@ -1,4 +1,10 @@
-{% set image = page.media.images|first %}
+{% if page.header.workItemImage %}
+    {% set image = page.header.workItemImage %}
+{% else %}
+    {% set image = page.media.images|first %}
+    {% set image = image.cropResize(640, 3000).format('webp').url %} {# We keep the original height, but maximum width is 640px #}
+{% endif %}
+
 
 {% set column = page.header.columnWidth ? page.header.columnWidth : 'col-md-3' %}
 
@@ -14,7 +20,7 @@
         {% if (image) %}
             <img 
                 class="img-fluid"
-                src="{{ image.cropResize(640, 3000).format('webp').url }}" {# We keep the original height, but maximum width is 640px #}
+                src="{{ image }}"
                 alt="{{ page.title }}"
             > 
         {% endif %}
