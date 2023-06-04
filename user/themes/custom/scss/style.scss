@@ -1,4 +1,3 @@
-@import "_bootstrap_icons";
 @import "_breakpoints";
 @import "_variables";
 
@@ -304,8 +303,17 @@ h1 {
 --------------------------------------------------------------*/
 
 .content-creation {
+    text-align: center;
+
+    .row {
+        display: flex;
+        justify-content: space-around;
+    }
+
     video {
         border-radius: 5px;
+        width: 22.5rem;
+        margin: auto;
     }
 }
 

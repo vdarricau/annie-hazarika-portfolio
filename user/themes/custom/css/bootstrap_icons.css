@@ -1,0 +1,39 @@
+@font-face {
+    font-display: block;
+    font-family: "bootstrap-icons";
+    src: url("../vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?24e3eb84d0bcaf83d77f904c78ac1f47")
+            format("woff2"),
+        url("../vendor/bootstrap-icons/fonts/bootstrap-icons.woff?24e3eb84d0bcaf83d77f904c78ac1f47")
+            format("woff");
+}
+
+.bi::before,
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+    display: inline-block;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -0.125em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.bi-chevron-left::before {
+    content: "\f284";
+}
+.bi-chevron-right::before {
+    content: "\f285";
+}
+.bi-instagram::before {
+    content: "\f437";
+}
+.bi-linkedin::before {
+    content: "\f472";
+}
+.bi-arrow-up-short::before {
+    content: "\f145";
+}
