@@ -107,6 +107,10 @@ h1 {
 
     &:first-child {
         padding-left: 0;
+
+        @include media-breakpoint-down(xs) {
+            margin-bottom: 0.5rem;
+        }
     }
 
     &:hover,
@@ -304,11 +308,6 @@ h1 {
 
 .content-creation {
     text-align: center;
-
-    .row {
-        display: flex;
-        justify-content: space-around;
-    }
 
     video {
         border-radius: 5px;

@@ -1,6 +1,5 @@
 ---
 title: Content Creation
-visible: false
 ---
 
 <section class="section content-creation pb-0">
