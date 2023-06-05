@@ -1,15 +1,15 @@
 ---
-title: 'Eva Zubeck'
+title: "Eva Zubeck"
 columnWidth: col-md-6
 showImages: false
-workItemImage: /user/pages/01.portfolio/2600.eva-zubeck/eva-animation.gif
+workItemImage: /user/pages/01.portfolio/2600.eva-zubeck/eva-animation-small.webp
 ---
 
 ![Eva Zubeck Intro](eva-animation.gif)
 <br>
 <br>
 <br>
-Had a blast working with Eva Zubeck on her YouTube intro animation, her IG intro animation and her channel banner. 
+Had a blast working with Eva Zubeck on her YouTube intro animation, her IG intro animation and her channel banner.
 <br>
 <br>
 <br>

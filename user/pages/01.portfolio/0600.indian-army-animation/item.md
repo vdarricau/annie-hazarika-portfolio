@@ -1,7 +1,8 @@
 ---
 title: Indian Army
-columnWidth: 'col-md-6'
+columnWidth: "col-md-6"
 showImages: false
+workItemImage: /user/pages/01.portfolio/0600.indian-army-animation/indian-army-animation.webp
 ---
 
 <div class="text-center">
